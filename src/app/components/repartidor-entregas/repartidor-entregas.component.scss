@@ -1,0 +1,26 @@
+/*VARIABLES*/
+
+$blanco: #ffffff;
+$fijo: fixed;
+$z4: 4;
+$relativa: relative;
+$absoluta: absolute;
+$transparente: transparent;
+$cien: 100%;
+$cienvh: 100vh;
+$cincuenta: 50%;
+$menos50: -50%;
+
+/*CERRANDO VARIABLES*/
+
+.repentregasback{
+    display: $relativa;
+    width: $cien;
+    height: $cienvh;
+}
+
+table{
+    position: $relativa;
+    width: 50%;
+    z-index: $z4;
+}

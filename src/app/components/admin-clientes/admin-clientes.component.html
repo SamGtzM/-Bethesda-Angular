@@ -1,0 +1,85 @@
+<section class="backclients">
+    <div class="bactab">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn_pp btn-primary" data-toggle="modal" data-target="#exampleModal">
+          AGREGAR
+      </button>
+        <table datatable class="row-border hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>EDITAR</th>
+            <th>ELIMINAR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>4</td>
+            <td>Yoda</td>
+            <td>Skywalker</td>
+            <td align="center"><a href="" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>            </a></td>
+            <td align="center"><a href=""><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+          </tr>
+        </tbody>
+    </table>
+    </div>      
+</section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Clientes</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form method="POST">
+            <div align="center" class="modal-body">
+
+                <label for="">TIPO DE ACCESO</label>
+
+                <select [(ngModel)]="user.id_acceso" name="id_acceso">
+                  <option value="1">Administrador</option>
+                  <option value="2">Repartidor</option>
+                </select>
+
+                <label for=""># EMPLEADO</label>
+
+                <input [(ngModel)]="user.numero_empleado" type="text" name="numero_empleado" autocomplete="off" required>
+
+                <label for="">NOMBRE COMPLETO</label>
+
+                <input [(ngModel)]="user.nombre_completo" type="text" name="nombre_completo" autocomplete="off" required>
+
+                <label for="">CORREO</label>
+
+                <input [(ngModel)]="user.correo_electronico" type="text" name="correo_electronico" autocomplete="off" required>
+
+                <label for="">TELEFONO</label>
+
+                <input [(ngModel)]="user.telefono" type="text" name="telefono" autocomplete="off" required>
+
+                <label for="">USUARIO</label>
+
+                <input [(ngModel)]="user.usuario" type="text" name="usuario" autocomplete="off" required>
+
+                <label for="">CONTRASEÑA</label>
+
+                <input [(ngModel)]="user.pass" type="password" name="pass" autocomplete="off" required>
+
+                <label for="">CONFIRMAR CONTRASEÑA</label>
+
+                <input [(ngModel)]="password.pass" type="password" name="confirmpass" autocomplete="off" required>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" (click)="singUp()" class="btn_sc btn-primary">Save changes</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>

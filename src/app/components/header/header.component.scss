@@ -1,0 +1,59 @@
+/*VARIABLES*/
+
+$negro: #000000;
+$blanco : #ffffff;
+$transparente: transparent;
+$weight: bold;
+$absoluta: absolute;
+$relativa: relative;
+$fija: fixed;
+$z: 1;
+$z2: 2;
+$none: none;
+$cienvh: 100vh;
+$cien: 100%;
+$auto: auto;
+$center: center;
+$menos50: -50%;
+$cincuenta: 50%;
+
+/*CERRANDO VARIABLES*/
+
+/*HEADER*/
+
+.logo{
+    position: $fija;
+    left: -1.5%;
+    top: 1%;
+    z-index: $z2;
+    background-color: $transparente;
+}
+  
+.logo li{
+    list-style: $none;
+    background-color: $transparente;
+}
+  
+.logo li a{
+    text-decoration: $none;
+    cursor: pointer;
+    background-color: $transparente;
+}
+  
+.logo li a img{
+    position: $relativa;
+    width: 21.5vh;
+    background-color: $transparente;
+}
+  
+    /*MEDIAQUERY*/
+  
+    @media screen and (max-width: 1050px) {
+      .logo{
+        display: $none;
+      }
+    }
+  
+    /*CERRANDO MERIQUERY*/
+  
+/*CERRANDO HEADER*/

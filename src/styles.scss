@@ -1,1 +1,270 @@
-/* You can add global styles to this file, and also import other style files */
+/*VARIABLES*/
+
+$blanco: #ffffff;
+$negro: #000000;
+$fijo: fixed;
+$z4: 4;
+$relativa: relative;
+$transparente: transparent;
+$absoluta: absolute;
+$bold: bold;
+$menos50: -50%;
+$cincuenta: 50%;
+$center: center;
+$none: none;
+$auto: auto;
+$cien: 100%;
+
+/*CERRANDO VARIABLES*/
+
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1vh;
+  font-family: 'Raleway', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  background-color: #000000;
+}
+    
+body::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-right: #ffffff solid .1vh;
+}
+
+body::-webkit-scrollbar-thumb:active{
+  background-color: transparent;
+}
+
+::-webkit-scrollbar{
+  width: 4px;
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track{
+  border-radius: 20px;
+  background-color: #8FA9B4;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 20px;
+  background-color: #AB4A58;
+  filter: drop-shadow(0 1px 3px);
+  background-image: -webkit-linear-gradient(90deg,transparent,rgba(0, 0, 0, 0.4) 50%,transparent,transparent)
+} 
+
+/*BOTON DE HOME*/
+
+.homered{
+  position: $fijo;
+  right: 3%;
+  top: 50%;
+  z-index: $z4;
+  color: $blanco;
+  transition: 1s;
+}
+
+.homered i{
+  position: $relativa;
+  width: 2.5vh;
+  background-color: $transparente;
+  font-size: 120%;
+}
+
+.homered:hover{
+  background-color: rgba(0,0,0,.10);
+  color: $blanco;
+  -webkit-box-shadow: 10px 10px 5px -6px rgba(130,130,130,1);
+  -moz-box-shadow: 10px 10px 5px -6px rgba(130,130,130,1);
+  box-shadow: 10px 10px 5px -6px rgba(130,130,130,1);
+}
+
+/*CERRANDO BOTON DE HOME*/
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/*DATATABLE*/
+
+table{
+  position: $relativa;
+  width: 100% !important;
+  -webkit-box-shadow: 10px 10px 5px -6px rgba(130,130,130,1);
+    -moz-box-shadow: 10px 10px 5px -6px rgba(130,130,130,1);
+    box-shadow: 10px 10px 5px -6px rgba(130,130,130,1);
+}
+
+table thead tr th{
+  font-weight: $bold;
+  color: $negro;
+  text-align: $center;
+  background-color: $blanco;
+}
+
+table tbody tr td{
+  color: $negro;
+  font-weight: $bold;
+  font-size: 80%;
+  font-weight: $bold;
+}
+
+table tbody tr td a{
+  color: red;
+  font-size: 150%;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+table tbody tr td a:hover{
+  color: grey;
+}
+
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+  color: $blanco !important;
+  font-weight: $bold !important;
+}
+
+div.dataTables_wrapper div.dataTables_filter label {
+  font-weight: $bold !important;
+  white-space: nowrap;
+  text-align: left;
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+  margin-left: 0.5em;
+  display: inline-block;
+  width: auto;
+  border-bottom: solid .1vh $blanco !important;
+  border-left: solid .1vh $blanco !important;
+  border-top: $none;
+  border-right: $none;
+}
+
+div.dataTables_wrapper div.dataTables_length label {
+  font-weight: $bold !important;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+  border-bottom: solid .1vh $blanco !important;
+  border-left: solid .1vh $blanco !important;
+  border-top: $none;
+  border-right: $none;
+  color: $negro !important;
+  font-weight: $bold;
+}
+
+#DataTables_Table_0_previous, #DataTables_Table_0_next{
+  color: $blanco !important;
+}
+
+#DataTables_Table_0_previous:hover{
+  background-color: $transparente !important;
+}
+
+/*CERRANDO DATATABLE*/
+
+/*MODAL*/
+
+.modal-header {
+  border-bottom: $none !important;
+}
+
+.modal-title{
+  font-size: 150%;
+  color: $negro;
+  font-weight: $bold;
+  width: $cien;
+  text-align: $center;
+}
+
+.modal-body label{
+  width: 80%;
+  height: $auto;
+  font-size: 80%;
+  font-weight: $bold;
+  text-align: justify;
+}
+
+.modal-body input, .modal-body select{
+  width: 80%;
+    height: $auto;
+    border: $none;
+    border-bottom: solid .1vh $negro;
+    border-left: solid .1vh $negro;
+    color: $negro;
+    background-color: $transparente;
+    font-size: 116%;
+    font-weight: $bold;
+    outline: $none !important;
+    outline-width: 0 !important;
+    box-shadow: $none;
+    -moz-box-shadow: $none;
+    -webkit-box-shadow: $none;
+    text-align: $center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.modal-footer{
+  border-top: $none !important;
+}
+
+.btn_pp{
+  position: $absoluta;
+  left: $cincuenta;
+  transform: translate($menos50, $menos50);
+  background-color: $transparente !important;
+  color: $blanco !important;
+  height: 7vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: solid .1vh $blanco !important;
+  transition: 500ms;
+  outline: $none !important;
+  outline-width: 0 !important;
+  box-shadow: $none !important;
+  -moz-box-shadow: $none !important;
+  -webkit-box-shadow: $none !important;
+  font-weight: $bold !important;
+  text-align: center !important;
+}
+
+.btn_pp:hover{
+  background-color: rgba(255,255,255,.10) !important;
+  color: $blanco !important;
+  border: $none !important;
+  -webkit-box-shadow: 10px 10px 5px -6px rgba(130,130,130,1) !important;
+  -moz-box-shadow: 10px 10px 5px -6px rgba(130,130,130,1) !important;
+  box-shadow: 10px 10px 5px -6px rgba(130,130,130,1) !important;
+}
+
+.btn_sc{
+  background-color: $transparente !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  color: $negro !important;
+  height: 7vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: solid .1vh $negro !important;
+  transition: 500ms;
+  outline: $none !important;
+  outline-width: 0 !important;
+  box-shadow: $none !important;
+  -moz-box-shadow: $none !important;
+  -webkit-box-shadow: $none !important;
+  font-weight: $bold !important;
+  text-align: center !important;
+}
+
+.btn_sc:hover{
+  background-color: rgba(0,0,0,.10) !important;
+  color: $negro !important;
+  border: $none !important;
+  -webkit-box-shadow: 10px 10px 5px -6px rgba(130,130,130,1) !important;
+  -moz-box-shadow: 10px 10px 5px -6px rgba(130,130,130,1) !important;
+  box-shadow: 10px 10px 5px -6px rgba(130,130,130,1) !important;
+}
+
+/*CERRANDO MODAL*/

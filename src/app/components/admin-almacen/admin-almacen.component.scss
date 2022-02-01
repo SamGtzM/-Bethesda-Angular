@@ -1,0 +1,44 @@
+/*VARIABLES*/
+
+$negro: #000000;
+$blanco : #ffffff;
+$transparente: transparent;
+$weight: bold;
+$absoluta: absolute;
+$relativa: relative;
+$fija: fixed;
+$z: 1;
+$z2: 2;
+$none: none;
+$cienvh: 100vh;
+$cien: 100%;
+$auto: auto;
+$center: center;
+$menos50: -50%;
+$cincuenta: 50%;
+
+/*CERRANDO VARIABLES*/
+
+/*ALMACEN*/
+
+.backalmacen{
+    position: $relativa;
+    width: $cien;
+    height: $cienvh;
+    z-index: $z;
+}
+
+.bactabalm{
+    position: $absoluta;
+    width: 80% !important;
+    height: $auto;
+    top: $cincuenta;
+    left: $cincuenta;
+    transform: translate($menos50, $menos50);
+    -webkit-transform: translate($menos50, $menos50);
+    -moz-transform: translate($menos50, $menos50);
+    -ms-transform: translate($menos50, $menos50);
+    -o-transform: translate($menos50, $menos50);
+}
+
+/*CERRANDO ALMACEN*/

@@ -1,0 +1,64 @@
+/*VARIABLES*/
+
+$blanco: #ffffff;
+$fijo: fixed;
+$z4: 4;
+$relativa: relative;
+$transparente: transparent;
+
+/*CERRANDO VARIABLES*/
+
+/*back video*/
+
+.backwhite {
+  position: $fijo;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  top: 50%;
+	left: 50%;
+  transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+  background-color: rgba($blanco, .25);
+  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  transition: 0.5s ease;
+}
+
+.inivid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 110%;
+  min-height: 100vh;
+
+  -webkit-filter: blur(5px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+}
+
+/*mediaquery*/
+
+@media screen and (max-width: 1050px) {
+	.inivid{
+    min-width: 100%;
+    min-height: 100vh;
+    top: 50%;
+	  left: 45%;
+	  text-align: center;
+	  transform: translate(-50%, -50%);
+	  -webkit-transform: translate(-50%, -50%);
+	}
+}
+
+@media screen and (max-width: 600px) {
+  .backwhite{
+    height: 150vh;
+  }
+}
+  
+/*cerrando mediaquery*/
+
+/*cerrando back video*/
